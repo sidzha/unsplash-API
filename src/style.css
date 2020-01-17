@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #222831;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+header {
+  height: 100px;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Galary */
+.grid {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.grid__item {
+  margin: 0 10px 20px;
+  flex: 1 1 290px;
+}
+
+/* Photos */
+.card {
+  background-color: #1a1d24;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 3px 6px rgba(233, 165, 18, 0.342);
+}
+
+.card__body {
+  width: 100%;
+  height: 215px;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.card__body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__footer {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.media__obj {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  margin-right: 15px;
+  float: left;
+}
+
+.media__body {
+  width: 100%;
+  height: 32px;
+  line-height: 12px;
+}
+
+.media__body a {
+  font-family: Segoe UI Light, serif;
+  font-size: 15px;
+  color: #dfa612;
+}
+
+.media__body a:hover {
+  text-decoration: none;
+}
