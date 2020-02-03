@@ -21,6 +21,7 @@ const unsplash = new Unsplash({
 const code = location.search.split('code=')[1];
 
 if (code) {
+  console.log(code);
   unsplash.auth
     .userAuthentication(code)
     .then(toJson)
