@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPhotos } from '../store/actions/index';
 
+import { fetchPhotos } from '../store/actions/index';
 import PhotoItem from './photo-item';
 
 const PhotosList = ({ photos }) => {
@@ -17,7 +17,6 @@ class PhotosListContainer extends Component {
 
   render() {
     const { photos } = this.props;
-
     return <PhotosList photos={photos} />;
   }
 }
