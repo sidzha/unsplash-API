@@ -20,20 +20,20 @@ const unsplash = new Unsplash({
 
 const code = location.search.split('code=')[1];
 
-// if (code) {
-//   unsplash.auth
-//     .userAuthentication(code)
-//     .then(toJson)
-//     .then(json => {
-//       unsplash.auth.setBearerToken(json.access_token);
-//     });
-// } else {
-//   const authenticationUrl = unsplash.auth.getAuthenticationUrl([
-//     'public',
-//     'read_user'
-//   ]);
-//   location.assign(authenticationUrl);
-// }
+if (code) {
+  unsplash.auth
+    .userAuthentication(code)
+    .then(toJson)
+    .then(json => {
+      unsplash.auth.setBearerToken(json.access_token);
+    });
+} else {
+  const authenticationUrl = unsplash.auth.getAuthenticationUrl([
+    'public',
+    'read_user'
+  ]);
+  location.assign(authenticationUrl);
+}
 
 const store = createStore(
   rootReducer,
